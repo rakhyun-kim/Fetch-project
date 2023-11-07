@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var business = [Meal()]
+    var service = MealListApi()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            ListView()
         }
-        .padding()
     }
 }
-
 #Preview {
     ContentView()
 }
