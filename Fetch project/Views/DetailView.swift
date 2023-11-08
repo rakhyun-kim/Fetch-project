@@ -12,15 +12,31 @@ struct DetailView: View {
     @State var mealDetail: Mealdetail?
     var idMeal: String?
     var mealDetailApi = MealDetailApi()
-    var ingredients: [String] = []
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
        
         ScrollView {
             VStack {
+                Button(action: {
+                    dismiss()
+                }, label: {
+                    Image(systemName: "multiply.circle.fill")
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding()
+                        .font(.largeTitle)
+                        .foregroundStyle(.gray)
+                        .opacity(0.5)
+                })
                 
+                // MARK: Meal name
+                Text(mealDetail?.strMeal ?? "")
+                    .font(.largeTitle)
+                    .padding([.bottom, .top], 5)
+                
+                // MARK: Display Meal Images
                 if let imageUrl = mealDetail?.strMealThumb {
-                    // Display Meal Images
+                    
                     AsyncImage(url: URL(string: imageUrl)!) { image in
                         image
                             .resizable()
@@ -38,10 +54,6 @@ struct DetailView: View {
                     Image(systemName: "arrow.up.left.and.down.right.and.arrow.up.right.and.down.left")
                 }
                 
-                // MARK: Meal name
-                Text(mealDetail?.strMeal ?? "")
-                    .font(.headline)
-                    .padding([.bottom, .top], 5)
                 // MARK: Meal Instructions
                 Text(mealDetail?.strInstructions ?? "")
                     .padding()
@@ -51,33 +63,14 @@ struct DetailView: View {
                     .font(.headline)
                     .padding([.bottom, .top], 5)
                 
-                    Section {
-                        HStack {
-                            Text(mealDetail?.strIngredient1 ?? "")
-                            Text(" - ")
-                            Text(mealDetail?.strMeasure1 ?? "")
-                        }
-                    }
-                    
-                    Text(mealDetail?.strIngredient2 ?? "")
-                    Text(mealDetail?.strIngredient3 ?? "")
-                    Text(mealDetail?.strIngredient4 ?? "")
-                    Text(mealDetail?.strIngredient5 ?? "")
-                    Text(mealDetail?.strIngredient6 ?? "")
-                    Text(mealDetail?.strIngredient7 ?? "")
-                    Text(mealDetail?.strIngredient8 ?? "")
-                    Text(mealDetail?.strIngredient9 ?? "")
-                    Text(mealDetail?.strIngredient10 ?? "")
-                    Text(mealDetail?.strIngredient11 ?? "")
-                    Text(mealDetail?.strIngredient12 ?? "")
-                    Text(mealDetail?.strIngredient13 ?? "")
-                    Text(mealDetail?.strIngredient14 ?? "")
-                    Text(mealDetail?.strIngredient15 ?? "")
-                    Text(mealDetail?.strIngredient16 ?? "")
-                    Text(mealDetail?.strIngredient17 ?? "")
-                    Text(mealDetail?.strIngredient18 ?? "")
-                    Text(mealDetail?.strIngredient19 ?? "")
-                    Text(mealDetail?.strIngredient20 ?? "")
+                Text("\(mealDetail?.strIngredient1 ?? "") - \(mealDetail?.strMeasure1 ?? "")")
+                Text("\(mealDetail?.strIngredient2 ?? "") - \(mealDetail?.strMeasure2 ?? "")")
+                Text("\(mealDetail?.strIngredient3 ?? "") - \(mealDetail?.strMeasure3 ?? "")")
+                Text("\(mealDetail?.strIngredient4 ?? "") - \(mealDetail?.strMeasure4 ?? "")")
+                Text("\(mealDetail?.strIngredient5 ?? "") - \(mealDetail?.strMeasure5 ?? "")")
+                Text("\(mealDetail?.strIngredient6 ?? "") - \(mealDetail?.strMeasure6 ?? "")")
+                Text("\(mealDetail?.strIngredient7 ?? "") - \(mealDetail?.strMeasure7 ?? "")")
+                Text("\(mealDetail?.strIngredient8 ?? "") - \(mealDetail?.strMeasure8 ?? "")")
                 
             }
             .task {

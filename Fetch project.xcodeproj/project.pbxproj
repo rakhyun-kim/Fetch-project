@@ -17,7 +17,6 @@
 		509A2B462AFADD0200354D4C /* MealDetail_Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2B452AFADD0200354D4C /* MealDetail_Api.swift */; };
 		509A2B482AFADD3C00354D4C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2B472AFADD3C00354D4C /* ListView.swift */; };
 		509A2B4A2AFADD4500354D4C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2B492AFADD4500354D4C /* DetailView.swift */; };
-		509A2B4C2AFAE0A800354D4C /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A2B4B2AFAE0A800354D4C /* Ingredients.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		509A2B452AFADD0200354D4C /* MealDetail_Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail_Api.swift; sourceTree = "<group>"; };
 		509A2B472AFADD3C00354D4C /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		509A2B492AFADD4500354D4C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		509A2B4B2AFAE0A800354D4C /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 			children = (
 				509A2B3F2AFADC6800354D4C /* MealList.swift */,
 				509A2B412AFADC9000354D4C /* MealDetail.swift */,
-				509A2B4B2AFAE0A800354D4C /* Ingredients.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,7 +180,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				509A2B462AFADD0200354D4C /* MealDetail_Api.swift in Sources */,
-				509A2B4C2AFAE0A800354D4C /* Ingredients.swift in Sources */,
 				509A2B4A2AFADD4500354D4C /* DetailView.swift in Sources */,
 				509A2B312AFADBFB00354D4C /* ContentView.swift in Sources */,
 				509A2B442AFADCEF00354D4C /* MealList_Api.swift in Sources */,
